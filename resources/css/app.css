@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', serif;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1920px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__content {
+  padding: 16px 0;
+}
+
+.header__title {
+  text-align: center;
+  font-weight: 500;
+}
+
+.sort {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.sort__button {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  margin-right: 7px;
+}
+.sort__button:hover {
+  cursor: pointer;
+}
+
+.sort__button-active {
+  color: #A934D1;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.images > div {
+  margin-right: 30px;
+  margin-bottom: 50px;
+}
+
+.upload {
+  text-align: end;
+}
+.upload__button {
+  color: #ffff;
+  padding: 10px 16px;
+  background-color: #3490dc;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.modal {
+  opacity: 0;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+  position: fixed;
+  overflow: auto;
+}
+
+.modal__content {
+  height: 80vh;
+}
+
+.modal-active {
+  animation-name: activeModal;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+}
+.modal__content {
+  position: relative;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50% , -50%);
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.modal__close-button:after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal__close-button:before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal__image {
+  max-width: 1100px;
+  max-height: 800px;
+  overflow-y: hidden;
+}
+
+.modal__image img {
+  width: 100%;
+  max-height: 100%;
+}
+
+.save {
+  background-color: #d7d7d7;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 350px;
+}
+
+
+@keyframes activeModal {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  10% {
+    opacity: 0;
+    width: 100vw;
+  }
+  100% {
+    opacity: 1;
+    width: 100vw;
+  }
+}
