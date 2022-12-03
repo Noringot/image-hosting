@@ -79,7 +79,7 @@ export default {
 }
 
 .card:hover .card__image img {
-  filter: sepia(60%);
+  filter: grayscale(1);
 }
 
 .card__image {
